@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
@@ -30,9 +29,9 @@ void	ft_putstr(char *str, int *counter);
 
 void	ft_putnbr(long int nb, int *counter);
 void	ft_putnbr_base_x(unsigned int nb, int *counter);
-void	ft_putnbr_base_X(unsigned int nb, int *counter);
+void	ft_putnbr_base_x_upper(unsigned int nb, int *counter);
 void	ft_putnbr_u(unsigned int n, int *counter);
 
-int	ft_printf(const char *str, ...);
+int		ft_printf(const char *str, ...);
 
 #endif

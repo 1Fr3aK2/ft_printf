@@ -5,11 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: raamorim <raamorim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/08 12:58:18 by raamorim          #+#    #+#             */
-/*   Updated: 2024/05/08 12:58:18 by raamorim         ###   ########.fr       */
+/*   Created: 2024/05/08 13:36:46 by raamorim          #+#    #+#             */
+/*   Updated: 2024/05/08 13:36:46 by raamorim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "ft_printf.h"
 
@@ -23,15 +22,15 @@ int	print_format(char c, va_list *ap)
 	else if (c == 's')
 		ft_putstr(va_arg(*ap, char *), &chars);
 	else if (c == 'p')
-		 ft_ptr((va_arg(*ap, unsigned long int)), &chars);
+		ft_ptr((va_arg(*ap, unsigned long int)), &chars);
 	else if (c == 'd' || c == 'i')
 		ft_putnbr((long)(va_arg(*ap, int)), &chars);
 	else if (c == 'u')
 		ft_putnbr_u((va_arg(*ap, unsigned int)), &chars);
 	else if (c == 'x')
-		 ft_putnbr_base_x((long)(va_arg(*ap, unsigned int)), &chars);
+		ft_putnbr_base_x((long)(va_arg(*ap, unsigned int)), &chars);
 	else if (c == 'X')
-		 ft_putnbr_base_X((long)(va_arg(*ap, unsigned int)), &chars);
+		ft_putnbr_base_x_upper((long)(va_arg(*ap, unsigned int)), &chars);
 	else if (c == '%')
 		ft_putchar('%', &chars);
 	return (chars);
@@ -50,9 +49,9 @@ static int	verify(char *str, char c)
 
 int	ft_printf(const char *str, ...)
 {
-	va_list	ap;
-	int		counter;
-	int		i;
+	va_list		ap;
+	int			counter;
+	int			i;
 
 	counter = 0;
 	i = 0;
@@ -77,7 +76,7 @@ int	ft_printf(const char *str, ...)
 
 /* int main()
 {
-	
+
 	int counter;
 	int counter1;
 	counter = ft_printf("%X",UINT_MAX);
@@ -88,14 +87,14 @@ int	ft_printf(const char *str, ...)
 	printf("\n");
 	printf("%d", counter1);
 } */
-/*  int	main()
+/*  int	main(void)
  {
-	int counter;	
-	
- 	counter = ft_printf("%d\n", -1);
- 	printf("\n");
- 	printf(" %d\n", -1);
- 	printf("\n"); */
+	int counter;
+
+	counter = ft_printf("%d\n", -1);
+	printf("\n");
+	printf(" %d\n", -1);
+	printf("\n"); */
 
 // 	int counter1;
 // 	int counter2;

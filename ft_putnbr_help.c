@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "ft_printf.h"
-
 
 void	ft_putnbr(long int nb, int *counter)
 {
@@ -34,7 +31,7 @@ void	ft_putnbr(long int nb, int *counter)
 
 void	ft_putnbr_base_x(unsigned int nb, int *counter)
 {
-	char *symbols;
+	char	*symbols;
 
 	symbols = "0123456789abcdef";
 	if (nb < 16)
@@ -46,17 +43,17 @@ void	ft_putnbr_base_x(unsigned int nb, int *counter)
 	}
 }
 
-void	ft_putnbr_base_X(unsigned int nb, int *counter)
+void	ft_putnbr_base_x_upper(unsigned int nb, int *counter)
 {
-	char *symbols;
+	char	*symbols;
 
 	symbols = "0123456789ABCDEF";
 	if (nb < 16)
 		ft_putchar(symbols[nb], counter);
 	else
 	{
-		ft_putnbr_base_X(nb / 16, counter);
-		ft_putnbr_base_X(nb % 16, counter);
+		ft_putnbr_base_x_upper(nb / 16, counter);
+		ft_putnbr_base_x_upper(nb % 16, counter);
 	}
 }
 

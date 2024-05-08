@@ -10,18 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "ft_printf.h"
 
-void ft_putptr(unsigned long int n, int *counter)
+void	ft_putptr(unsigned long int n, int *counter)
 {
-	char *symbols = "0123456789abcdef";
+	char	*symbols;
 
+	symbols = "0123456789abcdef";
 	if (n < 16)
-	{
 		ft_putchar(symbols[n], counter);
-	}
 	else
 	{
 		ft_putptr(n / 16, counter);
@@ -29,7 +26,7 @@ void ft_putptr(unsigned long int n, int *counter)
 	}
 }
 
-void ft_ptr(unsigned long int ptr, int *counter)
+void	ft_ptr(unsigned long int ptr, int *counter)
 {
 	if (!ptr)
 		ft_putstr("(nil)", counter);
