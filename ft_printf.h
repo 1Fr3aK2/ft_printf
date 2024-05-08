@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: raamorim <raamorim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/07 11:19:21 by raamorim          #+#    #+#             */
-/*   Updated: 2024/05/07 18:02:24 by raamorim         ###   ########.fr       */
+/*   Created: 2024/05/08 12:58:11 by raamorim          #+#    #+#             */
+/*   Updated: 2024/05/08 12:58:11 by raamorim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
@@ -25,7 +26,7 @@ void	ft_ptr(unsigned long int ptr, int *counter);
 
 void	ft_putchar(char c, int *counter);
 
-int	ft_putstr(char *str, int *counter);
+void	ft_putstr(char *str, int *counter);
 
 void	ft_putnbr(long int nb, int *counter);
 void	ft_putnbr_base_x(unsigned int nb, int *counter);

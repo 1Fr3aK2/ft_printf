@@ -5,31 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: raamorim <raamorim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/07 11:19:58 by raamorim          #+#    #+#             */
-/*   Updated: 2024/05/07 17:52:53 by raamorim         ###   ########.fr       */
+/*   Created: 2024/05/08 12:58:49 by raamorim          #+#    #+#             */
+/*   Updated: 2024/05/08 12:58:49 by raamorim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "ft_printf.h"
 
-int ft_putstr(char *str, int *counter)
+
+void	ft_putstr(char *str, int *counter)
 {
-    if (str == NULL)
-    {
-        write(1, "(null)", 6);
-        *counter += 6;
-        return (*counter); 
-    }
-    while (*str)
-    {
-        write(1, str++, 1);
-        (*counter)++;
-    }
-    
-    return (*counter); 
+	if (str == NULL)
+	{
+		write(1, "(null)", 6);
+		*counter += 6;
+		return ;
+	}
+	while (*str)
+	{
+		write(1, str++, 1);
+		(*counter)++;
+	}
 }
-
-
 
 /* int main()
 {
