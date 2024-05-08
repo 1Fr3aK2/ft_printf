@@ -55,6 +55,8 @@ int	ft_printf(const char *str, ...)
 
 	counter = 0;
 	i = 0;
+	if (!str)
+		return (-1);
 	va_start(ap, str);
 	while (str[i])
 	{

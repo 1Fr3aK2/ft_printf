@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/rafae/printf1",
-      "program": "c:/Users/rafae/printf1/build/Debug/outDebug",
+      "cwd": "c:/Users/rafae/ft_printf",
+      "program": "c:/Users/rafae/ft_printf/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
