@@ -74,21 +74,27 @@ int	ft_printf(const char *str, ...)
 	return (counter);
 }
 
-
-int main()
+/* int main()
 {
+	
 	int counter;
-	counter = ft_printf("%d\n", -1);
+	int counter1;
+	counter = ft_printf("%X",UINT_MAX);
+	printf("\n");
+	counter1 = printf("%X", UINT_MAX);
+	printf("\n");
 	printf("%d", counter);
-}
-// int	main()
-// {
+	printf("\n");
+	printf("%d", counter1);
+} */
+/*  int	main()
+ {
+	int counter;	
 	
-	
-// 	ft_printf("%d\n", -1);
-// 	printf("\n");
-// 	printf(" %d\n", -1);
-// 	printf("\n");
+ 	counter = ft_printf("%d\n", -1);
+ 	printf("\n");
+ 	printf(" %d\n", -1);
+ 	printf("\n"); */
 
 // 	int counter1;
 // 	int counter2;
@@ -147,4 +153,4 @@ int main()
 // 	printf("%d\n", counter16);
 // 	printf("%d\n", counter17);
 // 	printf("%d\n", counter18);
-// }
+/* } */

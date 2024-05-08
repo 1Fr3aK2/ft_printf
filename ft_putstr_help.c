@@ -12,21 +12,24 @@
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *str, int *counter)
+int ft_putstr(char *str, int *counter)
 {
-	if (str == NULL)
-	{
-		write(1, "(null)", 6);
-		(*counter)++;
-		return (1); 
-	}
-	while (*str)
-	{
-		write(1, str++, 1);
-		(*counter)++;
-	}
-	return (*counter);
+    if (str == NULL)
+    {
+        write(1, "(null)", 6);
+        *counter += 6;
+        return (*counter); 
+    }
+    while (*str)
+    {
+        write(1, str++, 1);
+        (*counter)++;
+    }
+    
+    return (*counter); 
 }
+
+
 
 /* int main()
 {

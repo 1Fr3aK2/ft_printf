@@ -27,7 +27,7 @@ int	ft_putchar(char c, int *counter);
 
 int	ft_putstr(char *str, int *counter);
 
-int	ft_putnbr(int nb, int *counter);
+int	ft_putnbr(long int nb, int *counter);
 int	ft_putnbr_base_x(unsigned int nb, int *counter);
 int	ft_putnbr_base_X(unsigned int nb, int *counter);
 int	ft_putnbr_u(unsigned int n, int *counter);

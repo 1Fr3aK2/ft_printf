@@ -10,20 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "ft_printf.h"
 
-int	ft_putnbr(int n, int *counter)
+int	ft_putnbr(long int nb, int *counter)
 {	
-	long int nb;
 	
-	nb = n;
 	if (nb < 0)
 	{
 		nb *= -1;
 		ft_putchar('-', counter);
-		(*counter)++;
 		ft_putnbr(nb, counter);
 	}
 	else if (nb <= 9)
@@ -89,12 +84,12 @@ int	ft_putnbr_u(unsigned int nb, int *counter)
 	return (*counter);
 }
 
-// int	main()
-// {
-// 	int counter;
+/*  int	main()
+ {
+ 	int counter;
 
-// 	counter = ft_putnbr(-1, &counter);
-// 	printf("\n");
-// 	printf("%d", counter);
+ 	counter = ft_putnbr(-1, &counter);
+ 	printf("\n");
+ 	printf("%d", counter);
 	
-// }
+} */
