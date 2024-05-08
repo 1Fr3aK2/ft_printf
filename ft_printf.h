@@ -32,6 +32,7 @@ void	ft_putnbr_base_x(unsigned int nb, int *counter);
 void	ft_putnbr_base_x_upper(unsigned int nb, int *counter);
 void	ft_putnbr_u(unsigned int n, int *counter);
 
+int		print_format(char c, va_list *ap);
 int		ft_printf(const char *str, ...);
 
 #endif
