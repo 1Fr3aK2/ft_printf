@@ -21,16 +21,16 @@
 # define FLAGS "csdiupxX%"
 
 void	ft_putptr(unsigned long int n, int *counter);
-int	ft_ptr(unsigned long int ptr, int *counter);
+void	ft_ptr(unsigned long int ptr, int *counter);
 
-int	ft_putchar(char c, int *counter);
+void	ft_putchar(char c, int *counter);
 
 int	ft_putstr(char *str, int *counter);
 
-int	ft_putnbr(long int nb, int *counter);
-int	ft_putnbr_base_x(unsigned int nb, int *counter);
-int	ft_putnbr_base_X(unsigned int nb, int *counter);
-int	ft_putnbr_u(unsigned int n, int *counter);
+void	ft_putnbr(long int nb, int *counter);
+void	ft_putnbr_base_x(unsigned int nb, int *counter);
+void	ft_putnbr_base_X(unsigned int nb, int *counter);
+void	ft_putnbr_u(unsigned int n, int *counter);
 
 int	ft_printf(const char *str, ...);
 

@@ -27,7 +27,7 @@ void ft_putptr(unsigned long int n, int *counter)
 	}
 }
 
-int ft_ptr(unsigned long int ptr, int *counter)
+void ft_ptr(unsigned long int ptr, int *counter)
 {
 	if (!ptr)
 		ft_putstr("(nil)", counter);
@@ -36,7 +36,6 @@ int ft_ptr(unsigned long int ptr, int *counter)
 		ft_putstr("0x", counter);
 		ft_putptr(ptr, counter);
 	}
-	return (*counter);
 }
 
 /* int main()
