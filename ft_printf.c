@@ -2,9 +2,12 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: raamorim <raamorim@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: raamorim <raamorim@student.42.fr>          +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2024/05/08 13:36:46 by raamorim          #+#    #+#             */
 /*   Updated: 2024/05/08 13:36:46 by raamorim         ###   ########.fr       */
 /*                                                                            */
@@ -14,7 +17,7 @@
 
 int	print_format(char c, va_list *ap)
 {
-	int	chars;
+	int		chars;
 
 	chars = 0;
 	if (c == 'c')
@@ -51,26 +54,24 @@ int	ft_printf(const char *str, ...)
 {
 	va_list		ap;
 	int			counter;
-	int			i;
 
 	counter = 0;
-	i = 0;
 	if (!str)
 		return (-1);
 	va_start(ap, str);
-	while (str[i])
+	while (*str)
 	{
-		if (str[i] == '%')
+		if (*str == '%')
 		{
-			if (verify(FLAGS, str[i + 1]))
+			if (verify(FLAGS, (*(str + 1))))
 			{
-				i++;
-				counter += print_format(str[i], &ap);
+				str++;
+				counter += print_format(*str, &ap);
 			}
 		}
 		else
-			counter += write(1, &str[i], 1);
-		i++;
+			counter += write(1, str, 1);
+		str++;
 	}
 	va_end(ap);
 	return (counter);
