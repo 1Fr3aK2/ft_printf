@@ -25,11 +25,11 @@ int	print_format(char c, va_list *ap)
 	else if (c == 's')
 		ft_putstr(va_arg(*ap, char *), &chars);
 	else if (c == 'p')
-		ft_ptr((va_arg(*ap, unsigned long int)), &chars);
+		ft_ptr(va_arg(*ap, unsigned long int), &chars);
 	else if (c == 'd' || c == 'i')
 		ft_putnbr((long)(va_arg(*ap, int)), &chars);
 	else if (c == 'u')
-		ft_putnbr_u((va_arg(*ap, unsigned int)), &chars);
+		ft_putnbr_u(va_arg(*ap, unsigned int), &chars);
 	else if (c == 'x')
 		ft_putnbr_base_x((long)(va_arg(*ap, unsigned int)), &chars);
 	else if (c == 'X')
