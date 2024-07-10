@@ -68,6 +68,8 @@ int	ft_printf(const char *str, ...)
 				str++;
 				counter += print_format(*str, &ap);
 			}
+			else if (*(str + 1) == '\0')
+				return (-1);
 		}
 		else
 			counter += write(1, str, 1);
@@ -76,6 +78,22 @@ int	ft_printf(const char *str, ...)
 	va_end(ap);
 	return (counter);
 }
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int counter = 0;
+	int counter1 = 0;
+    counter += printf("%");
+	counter1 += ft_printf("%");
+	printf("%d\n", counter);
+	printf("%d\n", counter1);
+    return 0;
+}
+
 
 /* int main()
 {
